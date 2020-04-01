@@ -45,6 +45,8 @@ D:\study\Dot net core practices\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\ParkyAPI.
 D:\study\Dot net core practices\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\ParkyAPI.dll
 D:\study\Dot net core practices\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\ParkyAPI.pdb
 D:\study\Dot net core practices\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-D:\study\Dot net core practices\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\study\Dot net core practices\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.dll
 D:\study\Dot net core practices\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.pdb
+D:\study\Dot net core practices\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\study\Dot net core practices\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\study\Dot net core practices\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.MvcApplicationPartsAssemblyInfo.cache

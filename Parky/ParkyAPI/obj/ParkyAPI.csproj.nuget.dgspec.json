@@ -28,11 +28,6 @@
           "netcoreapp3.1": {
             "projectReferences": {}
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -68,11 +63,15 @@
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
-              "version": "[3.1.0-preview1.19506.1, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.0-preview1-19509-03, )"
+              "version": "[3.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.3.1, )"
             }
           },
           "imports": [

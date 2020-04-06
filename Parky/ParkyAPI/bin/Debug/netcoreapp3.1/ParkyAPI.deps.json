@@ -17,7 +17,7 @@
     "optimize": false,
     "keyFile": "",
     "emitEntryPoint": true,
-    "xmlDoc": false,
+    "xmlDoc": true,
     "debugType": "portable"
   },
   "targets": {
@@ -30,8 +30,9 @@
           "Microsoft.EntityFrameworkCore": "3.1.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.3",
-          "Microsoft.Extensions.Logging.Debug": "3.1.0-preview1.19506.1",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.0-preview1-19509-03",
+          "Microsoft.Extensions.Logging.Debug": "3.1.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.0",
+          "Swashbuckle.AspNetCore": "5.3.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -351,11 +352,11 @@
           "Microsoft.AspNetCore.Html.Abstractions": "2.2.0"
         }
       },
-      "Microsoft.AspNetCore.Razor.Language/3.1.0-preview1.19508.6": {
+      "Microsoft.AspNetCore.Razor.Language/3.1.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Language.dll": {
             "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.100.19.50806"
+            "fileVersion": "3.100.19.56505"
           }
         },
         "compile": {
@@ -391,7 +392,7 @@
         }
       },
       "Microsoft.CodeAnalysis.Analyzers/2.9.4": {},
-      "Microsoft.CodeAnalysis.Common/3.4.0-beta2-final": {
+      "Microsoft.CodeAnalysis.Common/3.3.1": {
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "2.9.4",
           "System.Collections.Immutable": "1.7.0",
@@ -403,8 +404,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.dll": {
-            "assemblyVersion": "3.4.0.0",
-            "fileVersion": "3.400.19.50406"
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.300.119.46211"
           }
         },
         "resources": {
@@ -452,14 +453,14 @@
           "lib/netstandard2.0/Microsoft.CodeAnalysis.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.CSharp/3.4.0-beta2-final": {
+      "Microsoft.CodeAnalysis.CSharp/3.3.1": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.Common": "3.4.0-beta2-final"
+          "Microsoft.CodeAnalysis.Common": "3.3.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.CSharp.dll": {
-            "assemblyVersion": "3.4.0.0",
-            "fileVersion": "3.400.19.50406"
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.300.119.46211"
           }
         },
         "resources": {
@@ -507,16 +508,16 @@
           "lib/netstandard2.0/Microsoft.CodeAnalysis.CSharp.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.CSharp.Workspaces/3.4.0-beta2-final": {
+      "Microsoft.CodeAnalysis.CSharp.Workspaces/3.3.1": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.CSharp": "3.4.0-beta2-final",
-          "Microsoft.CodeAnalysis.Common": "3.4.0-beta2-final",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "3.4.0-beta2-final"
+          "Microsoft.CodeAnalysis.CSharp": "3.3.1",
+          "Microsoft.CodeAnalysis.Common": "3.3.1",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "3.3.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll": {
-            "assemblyVersion": "3.4.0.0",
-            "fileVersion": "3.400.19.50406"
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.300.119.46211"
           }
         },
         "resources": {
@@ -572,16 +573,16 @@
           "Microsoft.NetFramework.Analyzers": "2.9.8"
         }
       },
-      "Microsoft.CodeAnalysis.Razor/3.1.0-preview1.19508.6": {
+      "Microsoft.CodeAnalysis.Razor/3.1.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Razor.Language": "3.1.0-preview1.19508.6",
-          "Microsoft.CodeAnalysis.CSharp": "3.4.0-beta2-final",
-          "Microsoft.CodeAnalysis.Common": "3.4.0-beta2-final"
+          "Microsoft.AspNetCore.Razor.Language": "3.1.0",
+          "Microsoft.CodeAnalysis.CSharp": "3.3.1",
+          "Microsoft.CodeAnalysis.Common": "3.3.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Razor.dll": {
             "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.100.19.50806"
+            "fileVersion": "3.100.19.56505"
           }
         },
         "compile": {
@@ -589,15 +590,15 @@
         }
       },
       "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {},
-      "Microsoft.CodeAnalysis.Workspaces.Common/3.4.0-beta2-final": {
+      "Microsoft.CodeAnalysis.Workspaces.Common/3.3.1": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.Common": "3.4.0-beta2-final",
+          "Microsoft.CodeAnalysis.Common": "3.3.1",
           "System.Composition": "1.0.31"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Workspaces.dll": {
-            "assemblyVersion": "3.4.0.0",
-            "fileVersion": "3.400.19.50406"
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.300.119.46211"
           }
         },
         "resources": {
@@ -762,6 +763,7 @@
           "Microsoft.EntityFrameworkCore.Design": "3.1.3"
         }
       },
+      "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
       "Microsoft.Extensions.Caching.Abstractions/3.1.3": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "3.1.3"
@@ -888,7 +890,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Debug/3.1.0-preview1.19506.1": {
+      "Microsoft.Extensions.Logging.Debug/3.1.0": {
         "dependencies": {
           "Microsoft.Extensions.Logging": "3.1.3"
         }
@@ -941,122 +943,133 @@
       "Microsoft.NETCore.Platforms/2.1.2": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.NetFramework.Analyzers/2.9.8": {},
-      "Microsoft.VisualStudio.Web.CodeGeneration/3.1.0-preview1-19509-03": {
+      "Microsoft.OpenApi/1.1.4": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        }
+      },
+      "Microsoft.VisualStudio.Web.CodeGeneration/3.1.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.1.3",
-          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "3.1.0-preview1-19509-03"
+          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "3.1.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {
             "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.0"
+            "fileVersion": "3.100.19.57003"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.0-preview1-19509-03": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.0": {
         "dependencies": {
           "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll": {
             "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.0"
+            "fileVersion": "3.100.19.57003"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.0-preview1-19509-03": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.1.3",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "3.1.0-preview1-19509-03",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "3.1.0",
           "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
             "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.0"
+            "fileVersion": "3.100.19.57003"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.0-preview1-19509-03": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.0": {
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "3.1.0-preview1-19509-03"
+          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "3.1.0"
         },
         "runtime": {
-          "lib/netstandard2.0/dotnet-aspnet-codegenerator-design.dll": {
+          "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll": {
             "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.0"
+            "fileVersion": "3.100.19.57003"
           }
         },
         "compile": {
-          "lib/netstandard2.0/dotnet-aspnet-codegenerator-design.dll": {}
+          "lib/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.0-preview1-19509-03": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.0": {
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "3.1.0-preview1-19509-03"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "3.1.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {
             "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.0"
+            "fileVersion": "3.100.19.57003"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.0-preview1-19509-03": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Razor.Language": "3.1.0-preview1.19508.6",
+          "Microsoft.AspNetCore.Razor.Language": "3.1.0",
           "Microsoft.AspNetCore.Razor.Runtime": "2.2.0",
-          "Microsoft.CodeAnalysis.CSharp": "3.4.0-beta2-final",
-          "Microsoft.CodeAnalysis.Razor": "3.1.0-preview1.19508.6",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "3.1.0-preview1-19509-03"
+          "Microsoft.CodeAnalysis.CSharp": "3.3.1",
+          "Microsoft.CodeAnalysis.Razor": "3.1.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "3.1.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {
             "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.0"
+            "fileVersion": "3.100.19.57003"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.0-preview1-19509-03": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.0": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.4.0-beta2-final",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "3.1.0-preview1-19509-03",
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.3.1",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "3.1.0",
           "Newtonsoft.Json": "11.0.2",
           "NuGet.Frameworks": "4.7.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {
             "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.0"
+            "fileVersion": "3.100.19.57003"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.0-preview1-19509-03": {
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.0": {
         "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration": "3.1.0-preview1-19509-03"
+          "Microsoft.VisualStudio.Web.CodeGeneration": "3.1.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
             "assemblyVersion": "3.1.0.0",
-            "fileVersion": "3.1.0.0"
+            "fileVersion": "3.100.19.57003"
           }
         },
         "compile": {
@@ -1229,6 +1242,53 @@
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
           }
+        }
+      },
+      "Swashbuckle.AspNetCore/5.3.1": {
+        "dependencies": {
+          "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "5.3.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "5.3.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "5.3.1"
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/5.3.1": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.1.4"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "5.3.1.0",
+            "fileVersion": "5.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/5.3.1": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "5.3.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "5.3.1.0",
+            "fileVersion": "5.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/5.3.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "assemblyVersion": "5.3.1.0",
+            "fileVersion": "5.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -3825,12 +3885,12 @@
       "path": "microsoft.aspnetcore.razor/2.2.0",
       "hashPath": "microsoft.aspnetcore.razor.2.2.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Razor.Language/3.1.0-preview1.19508.6": {
+    "Microsoft.AspNetCore.Razor.Language/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-aZWjXwGKBCNcO7GvnieN9t0g/wtreW3KNGhVq9bsIZlnrpih1Q6pyfxiFHOXJMAooBC544sn6DMf1CW/mQnd8A==",
-      "path": "microsoft.aspnetcore.razor.language/3.1.0-preview1.19508.6",
-      "hashPath": "microsoft.aspnetcore.razor.language.3.1.0-preview1.19508.6.nupkg.sha512"
+      "sha512": "sha512-e/atqZ5CzmJWuG/yaYOzbWNON+oqNKfk1M/xTYW+hje/RoiUUjVP88wrX1s9rEHzaAU4UljIOSvMxLABc2X2gg==",
+      "path": "microsoft.aspnetcore.razor.language/3.1.0",
+      "hashPath": "microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Runtime/2.2.0": {
       "type": "package",
@@ -3860,26 +3920,26 @@
       "path": "microsoft.codeanalysis.analyzers/2.9.4",
       "hashPath": "microsoft.codeanalysis.analyzers.2.9.4.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.Common/3.4.0-beta2-final": {
+    "Microsoft.CodeAnalysis.Common/3.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ge7zyiTi5KlD1IbKOXgpWN9LiLGpXv5eiCyRx8nyfm57Bkpyyy4MNHjG02gBRaeZCL0y6LQx8ONmjS+xrDYgTw==",
-      "path": "microsoft.codeanalysis.common/3.4.0-beta2-final",
-      "hashPath": "microsoft.codeanalysis.common.3.4.0-beta2-final.nupkg.sha512"
+      "sha512": "sha512-N5yQdGy+M4kimVG7hwCeGTCfgYjK2o5b/Shumkb/rCC+/SAkvP1HUAYK+vxPFS7dLJNtXLRsmPHKj3fnyNWnrw==",
+      "path": "microsoft.codeanalysis.common/3.3.1",
+      "hashPath": "microsoft.codeanalysis.common.3.3.1.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.CSharp/3.4.0-beta2-final": {
+    "Microsoft.CodeAnalysis.CSharp/3.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xQ6OZFgpCOLeHiSlH70Ig5JrrZsRLcwnXgH9DOF6k9XEVvgTYEOffsY6Yf/vjvp+6JqrMcMGXoVO7whgF0iD1g==",
-      "path": "microsoft.codeanalysis.csharp/3.4.0-beta2-final",
-      "hashPath": "microsoft.codeanalysis.csharp.3.4.0-beta2-final.nupkg.sha512"
+      "sha512": "sha512-WDUIhTHem38H6VJ98x2Ssq0fweakJHnHYl7vbG8ARnsAwLoJKCQCy78EeY1oRrCKG42j0v6JVljKkeqSDA28UA==",
+      "path": "microsoft.codeanalysis.csharp/3.3.1",
+      "hashPath": "microsoft.codeanalysis.csharp.3.3.1.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.CSharp.Workspaces/3.4.0-beta2-final": {
+    "Microsoft.CodeAnalysis.CSharp.Workspaces/3.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7Cz5RKMy6yqBatWtCADP1kvqrLAZIyW8uCVypikUvYWkru97FKdbk81GwgVV2w/NzAwMgFrwLs5Xje3y/GaG/Q==",
-      "path": "microsoft.codeanalysis.csharp.workspaces/3.4.0-beta2-final",
-      "hashPath": "microsoft.codeanalysis.csharp.workspaces.3.4.0-beta2-final.nupkg.sha512"
+      "sha512": "sha512-dHs/UyfLgzsVC4FjTi/x+H+yQifgOnpe3rSN8GwkHWjnidePZ3kSqr1JHmFDf5HTQEydYwrwCAfQ0JSzhsEqDA==",
+      "path": "microsoft.codeanalysis.csharp.workspaces/3.3.1",
+      "hashPath": "microsoft.codeanalysis.csharp.workspaces.3.3.1.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.8": {
       "type": "package",
@@ -3888,12 +3948,12 @@
       "path": "microsoft.codeanalysis.fxcopanalyzers/2.9.8",
       "hashPath": "microsoft.codeanalysis.fxcopanalyzers.2.9.8.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.Razor/3.1.0-preview1.19508.6": {
+    "Microsoft.CodeAnalysis.Razor/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-R8FwKEKggyrkpEKJr1SzAb6HtFJaoi0fd4LREOJGBL4AwphxUzHnfLyM7w8XpjPB/O0ir3VKRYaK9c9J4LNkxQ==",
-      "path": "microsoft.codeanalysis.razor/3.1.0-preview1.19508.6",
-      "hashPath": "microsoft.codeanalysis.razor.3.1.0-preview1.19508.6.nupkg.sha512"
+      "sha512": "sha512-EI/9iVMneil8nZn7mqEujJvV63VRaz01Czc69NTrCQAh5CRfBvoeqBVsDx6oC9CIYla/AJYss+U4B/6Usecx7A==",
+      "path": "microsoft.codeanalysis.razor/3.1.0",
+      "hashPath": "microsoft.codeanalysis.razor.3.1.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.VersionCheckAnalyzer/2.9.8": {
       "type": "package",
@@ -3902,12 +3962,12 @@
       "path": "microsoft.codeanalysis.versioncheckanalyzer/2.9.8",
       "hashPath": "microsoft.codeanalysis.versioncheckanalyzer.2.9.8.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.Workspaces.Common/3.4.0-beta2-final": {
+    "Microsoft.CodeAnalysis.Workspaces.Common/3.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3ncmh4TDrARBytJO2WGvje73zDAweo4H0Vf/NtnYYp9fc731LQMAI9x1/l2Tbedqztj69WNeWmvOYHW2JzAdtg==",
-      "path": "microsoft.codeanalysis.workspaces.common/3.4.0-beta2-final",
-      "hashPath": "microsoft.codeanalysis.workspaces.common.3.4.0-beta2-final.nupkg.sha512"
+      "sha512": "sha512-NfBz3b5hFSbO+7xsCNryD+p8axsIJFTG7qM3jvMTC/MqYrU6b8E1b6JoRj5rJSOBB+pSunk+CMqyGQTOWHeDUg==",
+      "path": "microsoft.codeanalysis.workspaces.common/3.3.1",
+      "hashPath": "microsoft.codeanalysis.workspaces.common.3.3.1.nupkg.sha512"
     },
     "Microsoft.CodeQuality.Analyzers/2.9.8": {
       "type": "package",
@@ -3979,6 +4039,13 @@
       "path": "microsoft.entityframeworkcore.tools/3.1.3",
       "hashPath": "microsoft.entityframeworkcore.tools.3.1.3.nupkg.sha512"
     },
+    "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
+      "path": "microsoft.extensions.apidescription.server/3.0.0",
+      "hashPath": "microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.Caching.Abstractions/3.1.3": {
       "type": "package",
       "serviceable": true,
@@ -4042,12 +4109,12 @@
       "path": "microsoft.extensions.logging.abstractions/3.1.3",
       "hashPath": "microsoft.extensions.logging.abstractions.3.1.3.nupkg.sha512"
     },
-    "Microsoft.Extensions.Logging.Debug/3.1.0-preview1.19506.1": {
+    "Microsoft.Extensions.Logging.Debug/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zB9VDZ5DK42fl63itdsAmuwMFEh2vt1D5eVpX7+jzDKoz272q2iK3hqy4s7PA2V/9AzLaUXbVibN3P/havkNxA==",
-      "path": "microsoft.extensions.logging.debug/3.1.0-preview1.19506.1",
-      "hashPath": "microsoft.extensions.logging.debug.3.1.0-preview1.19506.1.nupkg.sha512"
+      "sha512": "sha512-pTuUb46wKuZD2nuvzmlHQfbm9sUAiOg1x1pe1fzxDHaocXaZQDjKGYYZifnTLeJk35OSi8ouEIcbuKLVF16yfg==",
+      "path": "microsoft.extensions.logging.debug/3.1.0",
+      "hashPath": "microsoft.extensions.logging.debug.3.1.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Options/3.1.3": {
       "type": "package",
@@ -4098,61 +4165,68 @@
       "path": "microsoft.netframework.analyzers/2.9.8",
       "hashPath": "microsoft.netframework.analyzers.2.9.8.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration/3.1.0-preview1-19509-03": {
+    "Microsoft.OpenApi/1.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-QEpyRy5OeHxicX99QImQ4n7myHRoKxu9a/Pvqfn8cC+sF7zvsHUTDl8LZ25PoTe9xW7xVD+dEW42vBuZPLYBFw==",
-      "path": "microsoft.visualstudio.web.codegeneration/3.1.0-preview1-19509-03",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.3.1.0-preview1-19509-03.nupkg.sha512"
+      "sha512": "sha512-6SW0tpbJslc8LAY1XniRfLVcJa7bJUbbwvo2/ZRqfkMbJrsqIj9045vg3STtZhDhYRKhpYgjqGU11eeW4Pzyrg==",
+      "path": "microsoft.openapi/1.1.4",
+      "hashPath": "microsoft.openapi.1.1.4.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.0-preview1-19509-03": {
+    "Microsoft.VisualStudio.Web.CodeGeneration/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-T7SMwQ4S/n0s+HPQvlEwkn0xaWi4MWiVBl4zFIk3D8FTeHeTbaHMaf3WZjIxwx4Z6UIcmvX3KCTWHLyu+2i7Sw==",
-      "path": "microsoft.visualstudio.web.codegeneration.contracts/3.1.0-preview1-19509-03",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.contracts.3.1.0-preview1-19509-03.nupkg.sha512"
+      "sha512": "sha512-T9/B2pRRFvDqpVgQAGTEgyXbrxIm8SmHz+aMauXLLg4/iAuSF5h14imIBSKeANxispjL1+1bCa1NaXxLdiXgZA==",
+      "path": "microsoft.visualstudio.web.codegeneration/3.1.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.3.1.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.0-preview1-19509-03": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rVld0fMuB7Bc52mtPPLlZ5WQCuZ3azn/UBpdRQVeDmxU6vb0svZpZ0pBQaOv+OvgeJ5n8Uq1C+mZgFGYIwDUrQ==",
-      "path": "microsoft.visualstudio.web.codegeneration.core/3.1.0-preview1-19509-03",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.core.3.1.0-preview1-19509-03.nupkg.sha512"
+      "sha512": "sha512-VkK8dUAMczEA7I8Min2A32KvmqsQxELabhqedDKyI+CcJ3omDNa7nL/eDwwp9UGobdnBnIVaqjULeQJpUYkkaQ==",
+      "path": "microsoft.visualstudio.web.codegeneration.contracts/3.1.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.contracts.3.1.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.0-preview1-19509-03": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4RCCAxSLaF7rcgaKUyM3c0W/gENT+kcvesyn676evCMPiNvHZeF8YMClA+oMKmY6IEFf5HhyNKtrnnwz962bWQ==",
-      "path": "microsoft.visualstudio.web.codegeneration.design/3.1.0-preview1-19509-03",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.design.3.1.0-preview1-19509-03.nupkg.sha512"
+      "sha512": "sha512-7P6KH81lAXpHEOqZDWS7yo7yJlXoFtQhKxYXaoCHc2VhLhGJ2UtxmKTUGheL4j0MPh4BBVxTHzAjFF26I07rOg==",
+      "path": "microsoft.visualstudio.web.codegeneration.core/3.1.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.core.3.1.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.0-preview1-19509-03": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ts2heWme8qr7+/jgP3H0XKzirULkSuEoNSs2hNC7xsodDrtXRut2/o0yfkXiwOwUhHaW8fojqiH7+79OyLn0XA==",
-      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/3.1.0-preview1-19509-03",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.entityframeworkcore.3.1.0-preview1-19509-03.nupkg.sha512"
+      "sha512": "sha512-ZHXVe8nDkHXmPlBNGOl3SIxoUKfah2OJOKKmq769gBMqHJMaOrFKhPYsHdTORjKUtwc3AlO1CMLgnljFyyxA/Q==",
+      "path": "microsoft.visualstudio.web.codegeneration.design/3.1.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.design.3.1.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.0-preview1-19509-03": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iI8h4uPeJss29XJqu4z00lTnW0xFIx5eI4M0G8JP0ZJdvz6ZBTNY0gBx5f/R2ahpgGWB1xNF8kpHWURE+3PtdQ==",
-      "path": "microsoft.visualstudio.web.codegeneration.templating/3.1.0-preview1-19509-03",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.templating.3.1.0-preview1-19509-03.nupkg.sha512"
+      "sha512": "sha512-gYNrm4DuqomIrqPzPLBEtJr8xhCdc4qEckEz59NElVso4DZIz78UDvYSfzfhF3qlKzlVNV353INeXLunpaWWVg==",
+      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/3.1.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.entityframeworkcore.3.1.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.0-preview1-19509-03": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2KeeRIuIqdMb/T24weGCqqIAXuuzXQY5Z92OWe6U2sRBDap+3NSdoH0CWaU67iHmcqSiLP/W/gezRbtu6LYOCQ==",
-      "path": "microsoft.visualstudio.web.codegeneration.utils/3.1.0-preview1-19509-03",
-      "hashPath": "microsoft.visualstudio.web.codegeneration.utils.3.1.0-preview1-19509-03.nupkg.sha512"
+      "sha512": "sha512-O5FQNCS9YeHGkgp+M1YGZHnE3YIIt4/QznrxYLf1BMFYFRNl0tClbqdtAZtBnbveXHfrf5U0VKq2J/yMREGgNg==",
+      "path": "microsoft.visualstudio.web.codegeneration.templating/3.1.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.templating.3.1.0.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.0-preview1-19509-03": {
+    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-T2VSQ/qYvZJOpeaJT2YVmWCLgnKEtAm/BIxqRquy9UVl7Nthd5rD5nY73Q89YAE5n6KM/Qtaid5EweCksHjtNA==",
-      "path": "microsoft.visualstudio.web.codegenerators.mvc/3.1.0-preview1-19509-03",
-      "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.3.1.0-preview1-19509-03.nupkg.sha512"
+      "sha512": "sha512-52c9OMBHxfJmRt0993W7BCAjZQmLqCmt0lpbFe2ecKSPuW5uZstXlNSUbv+vV9QUvcRRiKDdiWv/y98a2q/Qfw==",
+      "path": "microsoft.visualstudio.web.codegeneration.utils/3.1.0",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.utils.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-y4EFZyLFlFMetMJbR8SJZmy9Ba4Pj5oozhdwksnobn+v+yGTZoWxRTNRSRSRi8n+CE+oxWMcyd8RUiGCJGj2rg==",
+      "path": "microsoft.visualstudio.web.codegenerators.mvc/3.1.0",
+      "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.3.1.0.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
@@ -4328,6 +4402,34 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore/5.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gOyz34nuEM60oSTkh7Rzi/wujjoLuLiY3Q5EfoabJ4syST+U9VJaf/IFGRf4+2VlftDGJ8sIsrsj9tl9XONHnQ==",
+      "path": "swashbuckle.aspnetcore/5.3.1",
+      "hashPath": "swashbuckle.aspnetcore.5.3.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/5.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t30DQqBoQBXn8QlVpSabKLu0pQzj4ifc7YGunZwfkFJiAdelw0SrqIuwbkgFR8PpvjxzPGD8a+rEW2/bbOBq1Q==",
+      "path": "swashbuckle.aspnetcore.swagger/5.3.1",
+      "hashPath": "swashbuckle.aspnetcore.swagger.5.3.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/5.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rHS6e/d4EIPNRj0Pwfy+VWHitZt4QKUxRb2T5mcmwn83dk3ko3xiLVlnRLCQJNO8qLluzDMebdRSrQpulGqwFA==",
+      "path": "swashbuckle.aspnetcore.swaggergen/5.3.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.5.3.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/5.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nyj65n0bl3pbaMU9jmvCZWGPHhOEq8NyX0crIu7pOS00dk+gaPCHKU//cyrPMiLeJ1Cj2db6/wypz7XNj1y0DA==",
+      "path": "swashbuckle.aspnetcore.swaggerui/5.3.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggerui.5.3.1.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

@@ -38,6 +38,8 @@ namespace ParkyAPI
 
             services.AddScoped<INationalParkRepository, NationalParkRepository>();
 
+            services.AddScoped<ITrailRepository, TrailRepository>();
+
             services.AddAutoMapper(typeof(ParkyMappings));
 
             services.AddSwaggerGen(options => {

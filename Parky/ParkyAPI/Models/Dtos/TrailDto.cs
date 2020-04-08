@@ -23,5 +23,7 @@ namespace ParkyAPI.Models.Dtos
         public int NationalParkId { get; set; }
 
         public NationalParkDto NationalPark { get; set; }
+
+        public DateTime DateCreated { get; set; }
     }
 }

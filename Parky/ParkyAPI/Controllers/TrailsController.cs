@@ -11,8 +11,9 @@ using ParkyAPI.Repository.IRepository;
 
 namespace ParkyAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/trails")]
     [ApiController]
+    //[ApiExplorerSettings(GroupName = "ParkyOpenAPISpecTrails")]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public class TrailsController : Controller
     {
@@ -60,6 +61,28 @@ namespace ParkyAPI.Controllers
             return Ok(objDto);
         }
 
+        /// <summary>
+        /// Get trails in national park
+        /// </summary>
+        /// <param name="nationalParkId"> The id of the national park </param>
+        /// <returns></returns>
+        [HttpGet("[action]/{nationalParkId:int}", Name = "GetTrailInNationalPark")]
+        [ProducesResponseType(200, Type = typeof(TrailDto))]
+        [ProducesResponseType(404)]
+        [ProducesDefaultResponseType]
+        public IActionResult GetTrailInNationalPark(int nationalParkId)
+        {
+            var objList = _trailRepo.GetTrailsInNationalPark(nationalParkId);
+            if (objList == null)
+                return NotFound();
+            var objDto = new List<TrailDto>();
+            foreach (var obj in objList)
+            {
+                objDto.Add(_mapper.Map<TrailDto>(obj));
+            }
+            return Ok(objDto);
+        }
+
         [HttpPost]
         [ProducesResponseType(201, Type = typeof(TrailDto))]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -77,6 +100,7 @@ namespace ParkyAPI.Controllers
             }
 
             var trailObj = _mapper.Map<Trail>(trailDto);
+            trailObj.DateCreated = DateTime.Now;
 
             if (!_trailRepo.CreateTrail(trailObj))
             {
@@ -84,7 +108,8 @@ namespace ParkyAPI.Controllers
                 return StatusCode(500, ModelState);
             }
 
-            return CreatedAtRoute("GetTrail", new { trailId = trailObj.Id }, trailObj);
+            return CreatedAtRoute("GetTrail", new { version = HttpContext.GetRequestedApiVersion().ToString(),
+                                                    trailId = trailObj.Id }, trailObj);
         }
 
         [HttpPatch("{trailId:int}", Name = "UpdateTrail")]

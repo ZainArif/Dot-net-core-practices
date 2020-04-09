@@ -36,7 +36,15 @@ namespace ParkyAPI.Repository
 
         public ICollection<Trail> GetTrails()
         {
-            return _db.Trails.Include(c => c.NationalPark).OrderBy(a => a.Name).ToList();
+            return _db.Trails.Include(c => c.NationalPark).OrderBy(a => a.Name).ToList();  //Linq Method Syntax
+
+            //var trails = (from t in _db.Trails.Include(c => c.NationalPark)
+            //              orderby t.Name
+            //              select t).ToList();  //Linq Query Syntax  //Linq Query syntax
+            //return trails;
+
+            //var trails = _db.Trails.FromSqlRaw("select * from [dbo].[Trails]").Include(c => c.NationalPark).OrderBy(a => a.Name).ToList();  // Raw sql queries
+            //return trails;
         }
 
         public bool TrailExists(string name)

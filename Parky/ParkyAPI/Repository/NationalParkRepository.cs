@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace ParkyAPI.Repository
 {
@@ -35,7 +36,13 @@ namespace ParkyAPI.Repository
 
         public ICollection<NationalPark> GetNationalParks()
         {
-            return _db.NationalParks.OrderBy(a => a.Name).ToList();
+            return _db.NationalParks.OrderBy(a => a.Name).ToList();   //Linq Method Syntax
+
+            //var nationalParks = (from np in _db.NationalParks orderby np.Name select np).ToList();  //Linq Query Syntax
+            //return nationalParks;
+
+            //var nationalParks = _db.NationalParks.FromSqlRaw("SELECT * FROM [Parky].[dbo].[NationalParks] ORDER BY Name").ToList(); // Raw sql queries
+            //return nationalParks;
         }
 
         public bool NationalParkExists(string name)

@@ -16,5 +16,6 @@ namespace ParkyWeb.Repository.IRepository
         Task<bool> UpdateAsync(string url, T objToUpdate);
 
         Task<bool> DeleteAsync(string url, int Id);
+
     }
 }

@@ -412,3 +412,5 @@ D:\study\Dot net core practices\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.
 D:\study\Dot net core practices\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\ParkyWeb.MvcApplicationPartsAssemblyInfo.cache
 D:\study\Dot net core practices\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\Razor\Views\NationalParks\Index.cshtml.g.cs
 D:\study\Dot net core practices\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\Razor\Views\NationalParks\Upsert.cshtml.g.cs
+D:\study\Dot net core practices\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\Razor\Views\Trails\Index.cshtml.g.cs
+D:\study\Dot net core practices\Parky\ParkyWeb\obj\Debug\netcoreapp3.1\Razor\Views\Trails\Upsert.cshtml.g.cs

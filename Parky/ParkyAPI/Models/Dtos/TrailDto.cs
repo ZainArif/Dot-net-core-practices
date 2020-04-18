@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -16,6 +17,9 @@ namespace ParkyAPI.Models.Dtos
 
         [Required]
         public double Distance { get; set; }
+
+        [Required]
+        public double Elevation { get; set; }
 
         public DifficultyType Difficulty { get; set; }
 

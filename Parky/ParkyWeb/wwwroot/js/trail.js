@@ -14,7 +14,25 @@ function loadDataTable() {
         "columns": [
             { "data": "nationalPark.name", "width": "25%" },
             { "data": "name", "width": "20%" },
-            //{ "data": "difficulty", "width": "10%" },
+            {
+                "data": "difficulty",
+                "render": function (data) {
+
+                    var value = "";
+
+                    if (data == 0)
+                        value = "Easy";
+                    else if (data == 1)
+                        value = "Moderate";
+                    else if (data == 2)
+                        value = "Difficult";
+                    else
+                        value = "Expert";
+
+                    return value;
+                },
+                "width": "10%"
+            },
             { "data": "distance", "width": "10%" },
             { "data": "elevation", "width": "10%" },
             {

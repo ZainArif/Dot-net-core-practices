@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using WebApi.Models;
 
-namespace WebApi.Models
+namespace WebApi.Data
 {
     public class WebApiContext : DbContext
     {

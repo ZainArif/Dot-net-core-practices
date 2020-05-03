@@ -38,9 +38,7 @@ namespace ParkyAPI.Controllers
                 return BadRequest(new { messgae = "username or password is incorrect" });
             }
 
-            var userDtoObj = _mapper.Map<UserDto>(user);
-
-            return Ok(userDtoObj);
+            return Ok(user);
         }
 
         [AllowAnonymous]
@@ -60,9 +58,7 @@ namespace ParkyAPI.Controllers
                 return BadRequest(new { message = "Error while registering" });
             }
 
-            var userDtoObj = _mapper.Map<UserDto>(user);
-
-            return Ok(userDtoObj);
+            return Ok(user);
         }
     }
 }

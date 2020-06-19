@@ -24,6 +24,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using ParkyAPI.Security;
 
 namespace ParkyAPI
 {
@@ -125,6 +126,8 @@ namespace ParkyAPI
             //});
 
             services.AddControllers();
+            services.AddSingleton<DataProtectionPurposeStrings>();
+            services.AddDataProtection();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

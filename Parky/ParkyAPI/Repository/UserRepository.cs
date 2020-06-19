@@ -1,8 +1,10 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Microsoft.AspNetCore.DataProtection;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using ParkyAPI.Data;
 using ParkyAPI.Models;
 using ParkyAPI.Repository.IRepository;
+using ParkyAPI.Security;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -17,21 +19,32 @@ namespace ParkyAPI.Repository
     {
         private readonly ApplicationDbContext _db;
         private readonly AppSettings _appSettings;
+        private readonly IDataProtector _dataProtector;
 
-        public UserRepository(ApplicationDbContext db, IOptions<AppSettings> appSettings)
+        public UserRepository(ApplicationDbContext db, IOptions<AppSettings> appSettings, IDataProtectionProvider dataProtectionProvider,
+                              DataProtectionPurposeStrings dataProtectionPurposeStrings)
         {
             _db = db;
             _appSettings = appSettings.Value;
+            _dataProtector = dataProtectionProvider.CreateProtector(dataProtectionPurposeStrings.SecurePasswordKey);
         }
         public User Authenticate(string username, string password)
         {
-            var user = _db.Users.SingleOrDefault(x => x.Username == username && x.Password == password);
+            //var user = _db.Users.SingleOrDefault(x => x.Username == username && x.Password == password);
+            var user = _db.Users.SingleOrDefault(x => x.Username == username.Trim());
 
             //user not found
-            if(user == null)
+            if (user == null)
             {
                 return null;
             }
+
+            var unSecurePassword = _dataProtector.Unprotect(user.Password);
+            if (unSecurePassword != password)
+            {
+                return null;
+            }
+
 
             //if user was found
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -67,10 +80,12 @@ namespace ParkyAPI.Repository
 
         public User Register(string username, string password)
         {
+            var securePassword = _dataProtector.Protect(password.Trim());
+
             User userObj = new User()
             {
-                Username = username,
-                Password = password,
+                Username = username.Trim(),
+                Password = securePassword,
                 Role = "Admin"
             };
 

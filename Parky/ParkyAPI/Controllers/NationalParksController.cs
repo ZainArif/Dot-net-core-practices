@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -61,6 +62,9 @@ namespace ParkyAPI.Controllers
             if (obj == null)
                 return NotFound();
             var objDto = _mapper.Map<NationalParkDto>(obj);
+         
+      
+            
             return Ok(objDto);
         }
 
@@ -88,6 +92,7 @@ namespace ParkyAPI.Controllers
                 return StatusCode(500, ModelState);
             }
 
+            
             return CreatedAtRoute("GetNationalPark", new { version = HttpContext.GetRequestedApiVersion().ToString(),
                                                            nationalParkId = nationalParkObj.Id }, nationalParkObj);
         }

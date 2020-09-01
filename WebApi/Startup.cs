@@ -35,6 +35,37 @@ namespace WebApi
                     options.UseSqlServer(Configuration.GetConnectionString("WebApiContext")));
 
             services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("WebOpenAPISpec",
+                    new Microsoft.OpenApi.Models.OpenApiInfo()
+                    {
+                        Title = "Web API",
+                        Version = "1",
+                        Description = "Web API Description",
+                        Contact = new Microsoft.OpenApi.Models.OpenApiContact()
+                        {
+                            Email = "zainarif14197@gmail.com",
+                            Name = "Zain Arif",
+                            Url = new Uri("https://www.linkedin.com/in/zain-arif-1a0339168/")
+                        },
+                        License = new Microsoft.OpenApi.Models.OpenApiLicense()
+                        {
+                            Name = "MIT License",
+                            Url = new Uri("https://en.wikipedia.org/wiki/MIT_License")
+                        }
+                    });
+
+                //options.SwaggerDoc("ParkyOpenAPISpecTrails",
+                //    new Microsoft.OpenApi.Models.OpenApiInfo()
+                //    {
+                //        Title = "Parky API Trails",
+                //        Version = "1"
+                //    });
+
+                
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +77,17 @@ namespace WebApi
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/WebOpenAPISpec/swagger.json", "Web API");
+                //options.SwaggerEndpoint("/swagger/ParkyOpenAPISpecTrails/swagger.json", "Parky API Trails");
+                options.RoutePrefix = "";
+            });
+
+
 
             app.UseRouting();
 

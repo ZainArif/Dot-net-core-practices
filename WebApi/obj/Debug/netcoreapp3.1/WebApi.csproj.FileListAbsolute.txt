@@ -115,10 +115,15 @@ D:\study\Dot net core practices\WebApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\
 D:\study\Dot net core practices\WebApi\obj\Debug\netcoreapp3.1\WebApi.csprojAssemblyReference.cache
 D:\study\Dot net core practices\WebApi\obj\Debug\netcoreapp3.1\staticwebassets\WebApi.StaticWebAssets.Manifest.cache
 D:\study\Dot net core practices\WebApi\obj\Debug\netcoreapp3.1\staticwebassets\WebApi.StaticWebAssets.xml
-D:\study\Dot net core practices\WebApi\obj\Debug\netcoreapp3.1\WebApi.MvcApplicationPartsAssemblyInfo.cache
 D:\study\Dot net core practices\WebApi\obj\Debug\netcoreapp3.1\WebApi.AssemblyInfoInputs.cache
 D:\study\Dot net core practices\WebApi\obj\Debug\netcoreapp3.1\WebApi.AssemblyInfo.cs
 D:\study\Dot net core practices\WebApi\obj\Debug\netcoreapp3.1\WebApi.RazorTargetAssemblyInfo.cache
 D:\study\Dot net core practices\WebApi\obj\Debug\netcoreapp3.1\WebApi.csproj.CopyComplete
 D:\study\Dot net core practices\WebApi\obj\Debug\netcoreapp3.1\WebApi.dll
 D:\study\Dot net core practices\WebApi\obj\Debug\netcoreapp3.1\WebApi.pdb
+D:\study\Dot net core practices\WebApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\study\Dot net core practices\WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\study\Dot net core practices\WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\study\Dot net core practices\WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\study\Dot net core practices\WebApi\obj\Debug\netcoreapp3.1\WebApi.MvcApplicationPartsAssemblyInfo.cs
+D:\study\Dot net core practices\WebApi\obj\Debug\netcoreapp3.1\WebApi.MvcApplicationPartsAssemblyInfo.cache
